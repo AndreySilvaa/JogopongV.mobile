@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#dvpainel{
+    width: 100%;
+    background-color: rgb(190, 190, 190);
+    color: rgb(0, 0, 0);
+}
+
+#pontuação, #nivel{
+    display: flex;
+    padding: 15px;
+    border: 2px solid black;
+    align-items: center;
+}
+
+#pontosjogador, #pontoscpu{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 5px;
+}
+
+.pontos{
+    margin-left: 30px;
+}
+
+#facil{
+    margin-left: 15px;
+    background-color: rgb(0, 204, 17);
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#normal{
+    margin-left: 15px;
+    background-color: rgb(201, 204, 0);
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#dificil{
+    margin-left: 15px;
+    background-color: rgb(204, 7, 0);
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
