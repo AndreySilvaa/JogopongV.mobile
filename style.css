@@ -11,8 +11,8 @@ body{
 
 #pontuação, #nivel{
     display: flex;
-    padding: 8px;
-    border: 2px solid black;
+    padding: 5px;
+    border: 1px solid black;
     align-items: center;
 }
 
@@ -50,4 +50,17 @@ body{
     padding: 5px 15px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#dvcampo{
+    max-width: 360px;
+    height: 500px;
+    background-color: #324586;
+    margin: 5px;
+}
+
+#dvcpu{
+    width: 100px;
+    height: 20px;
+    background-color: rgb(56, 53, 53);
 }
