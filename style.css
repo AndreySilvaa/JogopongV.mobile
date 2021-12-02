@@ -59,7 +59,7 @@ body{
 }
 
 #dificil:hover, #normal:hover, #facil:hover{
-    filter: brightness(1.2);
+    filter: brightness(1.4);
 }
 
 #dvcampo{
@@ -105,4 +105,30 @@ body{
     top: 495px;
     left: 130px;
     box-shadow: -1px 1px 1px 0px black;
+}
+
+#controles{
+    display: flex;
+    max-width: 355px;
+    margin: 15px 5px;
+    justify-content: center;
+}
+
+#dvdireita, #dvesquerda{
+    width: 55px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    text-align: center;
+    line-height: 180%;
+    font-size: 20px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#dvinicia{
+    position: absolute;
+    top: 538px;
+    left: 285px;
+    padding: 5px 10px;
 }
