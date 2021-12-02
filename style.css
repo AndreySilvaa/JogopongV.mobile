@@ -34,6 +34,8 @@ body{
     padding: 5px 15px;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 3px 0px black;
 }
 
 #normal{
@@ -42,6 +44,8 @@ body{
     padding: 5px 15px;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 3px 0px black;
 }
 
 #dificil{
@@ -50,19 +54,33 @@ body{
     padding: 5px 15px;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 3px 0px black;
+}
+
+#dificil:hover, #normal:hover, #facil:hover{
+    filter: brightness(1.2);
 }
 
 #dvcampo{
     max-width: 360px;
-    height: 450px;
+    height: 420px;
     background-color: #324586;
     margin: 5px;
+    background-image: linear-gradient(95deg, #324586, #2145bd);
+    box-shadow: 0px 1px 1px 1px black;
 }
 
 #dvcpu{
     width: 100px;
     height: 20px;
     background-color: rgb(56, 53, 53);
+    background-image: url('img/barracpu.jpg');
+    background-position: center;
+    position: absolute;
+    top: 100px;
+    left: 130px;
+    box-shadow: -1px 1px 3px 0px black;
 }
 
 #dvbola{
@@ -70,10 +88,21 @@ body{
     height: 20px;
     background-color: white;
     border-radius: 50%;
+    background-image: linear-gradient(55deg, #999999, #ffffff 75%);
+    position: absolute;
+    top: 290px;
+    left: 170px;
+    box-shadow: -1px 1px 4px 0px black;
 }
 
 #dvjogador{
     width: 100px;
     height: 20px;
     background-color: #FBE8CA;
+    background-image: url('img/jogador.jpg');
+    background-position: center;
+    position: absolute;
+    top: 495px;
+    left: 130px;
+    box-shadow: -1px 1px 1px 0px black;
 }
