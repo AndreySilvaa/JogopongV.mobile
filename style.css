@@ -64,3 +64,16 @@ body{
     height: 20px;
     background-color: rgb(56, 53, 53);
 }
+
+#dvbola{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#dvjogador{
+    width: 100px;
+    height: 20px;
+    background-color: #FBE8CA;
+}
