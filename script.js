@@ -43,13 +43,45 @@ function saiu(){
 
 function controlajogador(){
     posjogadorX += veljogador*djogX
+
+    if(posjogadorX <= 5){
+        posjogadorX += veljogador*djogX *(-1)
+    } else if(posjogadorX+(barraW) > campoW+4){
+        posjogadorX += veljogador*djogX *(-1)
+    }
     dvjogador.style.left = posjogadorX+'px'
 }
 
+// Movimentação da bola
+
+function movebola(){
+    posbolaY += velbola*dbolaY
+    posbolaX += velbola*dbolaX
+
+    //Batida na barra do jogador
+    if(posbolaY+(bolaH) >= posjogadorY+60 && posbolaX < posjogadorX+(barraW) && posbolaX+(bolaW) > posjogadorX){
+        dbolaX = (((posbolaX+(bolaW/2)) - (posjogadorX+(barraW/2)))/22)
+                        //180                  180
+        dbolaY = -1
+    }
+
+
+
+
+    // Batida da bola nas laterais do campo
+
+    if(posbolaX+(bolaW) >= campoW+5 || posbolaX < 5){
+        dbolaX *= -1
+    }
+
+    dvbola.style.top = posbolaY+'px'
+    dvbola.style.left = posbolaX+'px'
+}
 // Controle do jogo
 function game(){
     if(jogo){
         controlajogador()
+        movebola()
     }
 
     frames = requestAnimationFrame(game)
@@ -59,10 +91,19 @@ function inicia(){
     if(!jogo){
         jogo = true
         cancelAnimationFrame(frames)
-        veljogador = 4
+        velbola = veljogador = 4
         posjogadorX = posInijogX
         posjogadorY = posInijogY
         djogX = 0
+        posbolaY = posInibolaY
+        posbolaX = posInibolaX
+        dbolaX = 0
+
+        if(Math.random()*10 < 5){
+            dbolaY = 1
+        } else{
+            dbolaY = -1
+        }
 
         game()
     }
@@ -75,11 +116,11 @@ function inicializa(){
     dvinicia = document.getElementById('dvinicia')
     dvinicia.addEventListener('click', inicia)
     btdireita = document.getElementById('dvdireita')
-    btdireita.addEventListener('mouseover', movedireita)
-    btdireita.addEventListener('mouseout', saiu)
+    btdireita.addEventListener('mousedown', movedireita)
+    btdireita.addEventListener('mouseup', saiu)
     btesquerda=document.getElementById('dvesquerda')
-    btesquerda.addEventListener('mouseover', moveesquerda)
-    btesquerda.addEventListener('mouseout', saiu)
+    btesquerda.addEventListener('mousedown', moveesquerda)
+    btesquerda.addEventListener('mouseup', saiu)
 }
 
 window.addEventListener('load', inicializa)
