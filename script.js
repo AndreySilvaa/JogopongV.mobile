@@ -81,14 +81,23 @@ function nivel(n){
         document.getElementById('facil').style.filter = 'brightness(1.4)'
         document.getElementById('normal').style.filter = 'brightness(1.0)'
         document.getElementById('dificil').style.filter = 'brightness(1.0)'
+        document.getElementById('facil').style.boxShadow = '0px 0px 3px 0px rgb(255, 255, 255)'
+        document.getElementById('normal').style.boxShadow = '0px 0px 3px 0px black'
+        document.getElementById('dificil').style.boxShadow = '0px 0px 3px 0px black'
     } else if(n == 5){
         document.getElementById('facil').style.filter = 'brightness(1.0)'
         document.getElementById('normal').style.filter = 'brightness(1.4)'
         document.getElementById('dificil').style.filter = 'brightness(1.0)'
+        document.getElementById('facil').style.boxShadow = '0px 0px 3px 0px black'
+        document.getElementById('normal').style.boxShadow = '0px 0px 3px 0px rgb(255, 255, 255)'
+        document.getElementById('dificil').style.boxShadow = '0px 0px 3px 0px black'
     } else if(n == 7){
         document.getElementById('facil').style.filter = 'brightness(1.0)'
         document.getElementById('normal').style.filter = 'brightness(1.0)'
         document.getElementById('dificil').style.filter = 'brightness(1.4)'
+        document.getElementById('facil').style.boxShadow = '0px 0px 3px 0px black'
+        document.getElementById('normal').style.boxShadow = '0px 0px 3px 0px black'
+        document.getElementById('dificil').style.boxShadow = '0px 0px 3px 0px rgb(255, 255, 255)'
     }
     velcpu = n
 }
